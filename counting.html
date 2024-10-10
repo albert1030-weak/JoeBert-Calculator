@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JoeBert Calculator</title>
+	<link rel="icon" type="image/x-icon" href="Images/favicon.ico">
+	<link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <div class="calc-container">
+		<center><img src="Images/logo.gif" width="200" height="200" alt="Logo2"></center>
+        <form id="fruitOrderForm">
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Boxes</th>
+                    <th>Order per Boxes</th>
+                    <th>Kilograms</th>
+                    <th>Order per Kilogram </th>
+                    <th>Total Box Order</th>
+                    <th>Total Kg Order</th>
+                    <th>Grand Total Box Count</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+					<td><img src="icons/apple.png" width="15" height="15" alt="apple image">Apples</td>
+                    <td><input type="number" name="applesBoxes" min="0" oninput="calculateTotal('apples')"></td>
+                    <td><input type="number" name="applesBoxPrice" min="0" step="0.01" oninput="calculateTotal('apples')" value="1" disabled="disabled" id="inputboxapple"><input type="checkbox" id="boxapple" Checked="checked"></td>
+                    <td><input type="number" name="applesKg" min="0" step="0.01" oninput="calculateTotal('apples')"></td>
+                    <td><input type="number" name="applesKgPrice" min="0" step="0.01" oninput="calculateTotal('apples')" value="18" disabled="disabled" id="inputkgapple"><input type="checkbox" id="kgapple" Checked="checked"></td>
+                    <td><input type="text" name="applesTotalBoxPrice" readonly disabled="disabled"></td>
+                    <td><input type="text" name="applesTotalKgPrice" readonly disabled="disabled"></td>
+                    <td><input type="text" name="applesGrandTotal" readonly></td>
+				</tr>
+				<tr>
+					<td><img src="icons/pineapple.png"  width="15" height="15" alt="apple image">Pineapple</td>
+                    <td><input type="number" name="PineappleBoxes" min="0" oninput="calculateTotal('Pineapple')"></td>
+                    <td><input type="number" name="PineappleBoxPrice" min="0" step="0.01" oninput="calculateTotal('Pineapple')" value="1" disabled="disabled" id="inputboxPineapple"><input type="checkbox" id="boxPineapple" Checked="checked"></td>
+                    <td><input type="number" name="PineappleKg" min="0" step="0.01" oninput="calculateTotal('Pineapple')"></td>
+                    <td><input type="number" name="PineappleKgPrice" min="0" step="0.01" oninput="calculateTotal('Pineapple')" value="12" disabled="disabled" id="inputkgPineapple"><input type="checkbox" id="kgPineapple" Checked="checked"></td>
+                    <td><input type="text" name="PineappleTotalBoxPrice" readonly disabled="disabled"></td>
+                    <td><input type="text" name="PineappleTotalKgPrice" readonly disabled="disabled"></td>
+                    <td><input type="text" name="PineappleGrandTotal" readonly></td>
+				</tr>
+            </tbody>
+        </table>
+        <br>
+        <input type="submit" value="Submit Orders">
+    </form>
+		
+		<script>
+        function calculateTotal(fruit) {
+            const boxes = parseFloat(document.querySelector(`input[name='${fruit}Boxes']`).value) || 0;
+            const boxPrice = parseFloat(document.querySelector(`input[name='${fruit}BoxPrice']`).value) || 0;
+            const kg = parseFloat(document.querySelector(`input[name='${fruit}Kg']`).value) || 0;
+            const kgPrice = parseFloat(document.querySelector(`input[name='${fruit}KgPrice']`).value) || 0;
+
+            const totalBoxPrice = (boxes * boxPrice).toFixed(2);
+            const totalKgPrice = (kg / kgPrice).toFixed(2);
+            const grandTotal = (parseFloat(totalBoxPrice) + parseFloat(totalKgPrice)).toFixed(2);
+
+            document.querySelector(`input[name='${fruit}TotalBoxPrice']`).value = totalBoxPrice;
+            document.querySelector(`input[name='${fruit}TotalKgPrice']`).value = totalKgPrice;
+            document.querySelector(`input[name='${fruit}GrandTotal']`).value = grandTotal;
+        }
+		</script>
+	
+		<script>
+			document.getElementById('boxapple').onchange = function() {
+    		document.getElementById('inputboxapple').disabled = this.checked;
+		};
+			document.getElementById('kgapple').onchange = function() {
+    		document.getElementById('inputkgapple').disabled = this.checked;
+		};
+		</script>
+		<script>
+			document.getElementById('boxPineapple').onchange = function() {
+    		document.getElementById('inputboxPineapple').disabled = this.checked;
+		};
+			document.getElementById('kgPineapple').onchange = function() {
+    		document.getElementById('inputkgPineapple').disabled = this.checked;
+		};
+		</script>
+
+		<a class="program-by">Program By: Albert M.</a>
+		<a class="version">Version 1.2</a>
+    </div>
+</body>
+</html>

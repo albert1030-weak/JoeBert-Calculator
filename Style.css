@@ -1,0 +1,133 @@
+		/* css for log in form */ 
+		body {
+            font-family: Arial, sans-serif;
+            background-color: #f7c1d9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .login-container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+        .login-container h2 {
+            text-align: center;
+            margin-bottom: 10px;
+			
+        }
+		
+		  .login-container p {
+            text-align: center;
+            margin-bottom: 10px;
+			color:#FF0000;
+			
+        }
+		
+        .login-container input[type="text"],
+        .login-container input[type="password"] {
+            width: 95%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .login-container button[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #f7c1d9;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+			
+        }
+        .login-container input[type="submit"]:hover {
+            background-color: #f22c84;
+        }
+		
+		 .login-container .program-by {
+            text-align: center;
+            display: block;
+            margin-top: 10px;
+            color: #171b1e;
+            text-decoration: none;
+			font-size: 10px;
+        }
+		
+		.login-container .version {
+            text-align: center;
+            display: block;
+            margin-top: 2px;
+            color: #171b1e;
+            text-decoration: none;
+			font-size: 8px;
+        }
+		
+		.login-container .d3 {
+            text-align: center;
+            display: block;
+            margin-top: 10px;
+            color: #171b1e;
+            text-decoration: none;
+			font-size: 12px;
+        }
+
+
+		/* css for calculator */ 
+		
+		.calc-container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            width: auto;
+			height: auto;
+        }
+        .calc-container h2 {
+            text-align: center;
+            margin-bottom: 10px;
+			
+        }
+		
+		  .calc-container p {
+            text-align: center;
+            margin-bottom: 10px;
+			color:#FF0000;
+			
+        }
+		
+        .calc-container input[type="number"],
+		.calc-container input[type="text"]
+         {
+            width:auto;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+		
+		 .calc-container .program-by {
+            text-align: center;
+            display: block;
+            margin-top: 10px;
+            color: #171b1e;
+            text-decoration: none;
+			font-size: 10px;
+        }
+		
+		.calc-container .version {
+            text-align: center;
+            display: block;
+            margin-top: 2px;
+            color: #171b1e;
+            text-decoration: none;
+			font-size: 8px;
+        }
+
+
+	

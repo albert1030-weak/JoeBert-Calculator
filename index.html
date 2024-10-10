@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JoeBert Login</title>
+	<link rel="icon" type="image/x-icon" href="Images/favicon.ico">
+	<link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <div class="login-container">
+		<center><img src="Images/logo2.gif" width="200" height="200"></center>
+        <h2>LET'S COUNT</h2>
+		<a class="d3">DUBAI DESIGN DISTRICT</a>
+        <form id="loginForm">
+            <input type="text" id="username" name="username" required placeholder="Username">
+            <input type="password" id="password" name="password" required placeholder="Password">
+            <button type="submit">Login</button>
+			<p id="error-message"></p>
+        </form>
+		
+		<script>
+		document.getElementById('loginForm').addEventListener('submit', function(event) {
+    	event.preventDefault();
+
+    	const username = document.getElementById('username').value;
+    	const password = document.getElementById('password').value;
+			
+    	if (username === 'albert' && password === '123321') {
+		 window.location.href = 'counting.html';
+    	} 
+		else {
+        document.getElementById('error-message').textContent = 'Invalid username or password';
+		}
+			
+		});
+		</script>
+		
+		<a class="program-by">Program By: Albert M.</a>
+		<a class="version">Version 1.2</a>
+    </div>
+</body>
+</html>
