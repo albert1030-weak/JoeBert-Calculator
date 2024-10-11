@@ -10,8 +10,11 @@
 <body>
     <div class="calc-container">
 		<center><img src="Images/logo.gif" width="200" height="200" alt="Logo2"></center>
+		<p>This is an Order Calculator Only Exclusive in D3!</p>
+		<center><input type="text" id="searchInput" placeholder="Search for items here." size="50"></center>
+		
         <form id="fruitOrderForm">
-        <table>
+        <table id="myTable">
             <thead>
                 <tr>
                     <th>Name</th>
@@ -26,7 +29,7 @@
             </thead>
             <tbody>
                 <tr>
-					<td><img src="icons/apple.png" width="15" height="15" alt="apple image">Apples</td>
+					<td><img src="icons/apple.png" width="15" height="15" alt="apple image">&nbsp; Apples</td>
                     <td><input type="number" name="applesBoxes" min="0" oninput="calculateTotal('apples')"></td>
                     <td><input type="text" name="applesBoxPrice" step="0.01" oninput="calculateTotal('apples')" value="1" disabled="disabled" id="inputboxapple" size="4" min="0"><input type="checkbox" id="boxapple" Checked="checked" ></td>
                     <td><input type="number" name="applesKg" min="0" step="0.01" oninput="calculateTotal('apples')"></td>
@@ -35,12 +38,257 @@
                     <td><input type="hidden" name="applesTotalKgPrice" readonly disabled="disabled" size="1"></td>
                     <td><input type="text" name="applesGrandTotal" readonly size="6"></td>
 				</tr>
+				
+				<tr>
+					<td><img src="icons/pineapple.png" width="15" height="15" alt="apple image">&nbsp; Pineapples</td>
+                    <td><input type="number" name="PineapplesBoxes" min="0" oninput="calculateTotal('Pineapples')"></td>
+                    <td><input type="text" name="PineapplesBoxPrice" step="0.01" oninput="calculateTotal('Pineapples')" value="1" disabled="disabled" id="inputboxPineapples" size="4" min="0"><input type="checkbox" id="boxPineapples" Checked="checked" ></td>
+                    <td><input type="number" name="PineapplesKg" min="0" step="0.01" oninput="calculateTotal('Pineapples')"></td>
+                    <td><input type="text" name="PineapplesKgPrice" step="0.01" oninput="calculateTotal('Pineapples')" value="12" disabled="disabled" id="inputkgPineapples" size="4"><input type="checkbox" id="kgPineapples" Checked="checked"></td>
+                    <td><input type="hidden" name="PineapplesTotalBoxPrice" readonly disabled="disabled" size="1"></td>
+                    <td><input type="hidden" name="PineapplesTotalKgPrice" readonly disabled="disabled" size="1"></td>
+                    <td><input type="text" name="PineapplesGrandTotal" readonly size="6"></td>
+				</tr>
+				
+				<tr>
+					<td><img src="icons/lemon.png" width="15" height="15" alt="apple image">&nbsp; Lemon</td>
+                    <td><input type="number" name="LemonBoxes" min="0" oninput="calculateTotal('Lemon')"></td>
+                    <td><input type="text" name="LemonBoxPrice" step="0.01" oninput="calculateTotal('Lemon')" value="1" disabled="disabled" id="inputboxLemon" size="4" min="0"><input type="checkbox" id="boxLemon" Checked="checked" ></td>
+                    <td><input type="number" name="LemonKg" min="0" step="0.01" oninput="calculateTotal('Lemon')"></td>
+                    <td><input type="text" name="LemonKgPrice" step="0.01" oninput="calculateTotal('Lemon')" value="15" disabled="disabled" id="inputkgLemon" size="4"><input type="checkbox" id="kgLemon" Checked="checked"></td>
+                    <td><input type="hidden" name="LemonTotalBoxPrice" readonly disabled="disabled" size="1"></td>
+                    <td><input type="hidden" name="LemonTotalKgPrice" readonly disabled="disabled" size="1"></td>
+                    <td><input type="text" name="LemonGrandTotal" readonly size="6"></td>
+				</tr>
+				
+				<tr>
+					<td><img src="icons/cucumber.png" width="15" height="15" alt="apple image">&nbsp; Cucumber</td>
+                    <td><input type="number" name="CucumberBoxes" min="0" oninput="calculateTotal('Cucumber')"></td>
+                    <td><input type="text" name="CucumberBoxPrice" step="0.01" oninput="calculateTotal('Cucumber')" value="1" disabled="disabled" id="inputboxCucumber" size="4" min="0"><input type="checkbox" id="boxCucumber" Checked="checked" ></td>
+                    <td><input type="number" name="CucumberKg" min="0" step="0.01" oninput="calculateTotal('Cucumber')"></td>
+                    <td><input type="text" name="CucumberKgPrice" step="0.01" oninput="calculateTotal('Cucumber')" value="5" disabled="disabled" id="inputkgCucumber" size="4"><input type="checkbox" id="kgCucumber" Checked="checked"></td>
+                    <td><input type="hidden" name="CucumberTotalBoxPrice" readonly disabled="disabled" size="1"></td>
+                    <td><input type="hidden" name="CucumberTotalKgPrice" readonly disabled="disabled" size="1"></td>
+                    <td><input type="text" name="CucumberGrandTotal" readonly size="6"></td>
+				</tr>
+				
+				<tr>
+					<td><img src="icons/turmeric.png" width="15" height="15" alt="apple image">&nbsp; Turmeric</td>
+                    <td><input type="number" name="TurmericBoxes" min="0" oninput="calculateTotal('Turmeric')"></td>
+                    <td><input type="text" name="TurmericBoxPrice" step="0.01" oninput="calculateTotal('Turmeric')" value="1" disabled="disabled" id="inputboxTurmeric" size="4" min="0"><input type="checkbox" id="boxTurmeric" Checked="checked" ></td>
+                    <td><input type="number" name="TurmericKg" min="0" step="0.01" oninput="calculateTotal('Turmeric')"></td>
+                    <td><input type="text" name="TurmericKgPrice" step="0.01" oninput="calculateTotal('Turmeric')" value="3" disabled="disabled" id="inputkgTurmeric" size="4"><input type="checkbox" id="kgTurmeric" Checked="checked"></td>
+                    <td><input type="hidden" name="TurmericTotalBoxPrice" readonly disabled="disabled" size="1"></td>
+                    <td><input type="hidden" name="TurmericTotalKgPrice" readonly disabled="disabled" size="1"></td>
+                    <td><input type="text" name="TurmericGrandTotal" readonly size="6"></td>
+				</tr>
+				
+				<tr>
+					<td><img src="icons/ginger.png" width="15" height="15" alt="apple image">&nbsp; Ginger</td>
+                    <td><input type="number" name="GingerBoxes" min="0" oninput="calculateTotal('Ginger')"></td>
+                    <td><input type="text" name="GingerBoxPrice" step="0.01" oninput="calculateTotal('Ginger')" value="1" disabled="disabled" id="inputboxGinger" size="4" min="0"><input type="checkbox" id="boxGinger" Checked="checked" ></td>
+                    <td><input type="number" name="GingerKg" min="0" step="0.01" oninput="calculateTotal('Ginger')"></td>
+                    <td><input type="text" name="GingerKgPrice" step="0.01" oninput="calculateTotal('Ginger')" value="3" disabled="disabled" id="inputkgGinger" size="4"><input type="checkbox" id="kgGinger" Checked="checked"></td>
+                    <td><input type="hidden" name="GingerTotalBoxPrice" readonly disabled="disabled" size="1"></td>
+                    <td><input type="hidden" name="GingerTotalKgPrice" readonly disabled="disabled" size="1"></td>
+                    <td><input type="text" name="GingerGrandTotal" readonly size="6"></td>
+				</tr>
+				
+				<tr>
+					<td><img src="icons/passion-fruit.png" width="15" height="15" alt="apple image">&nbsp; Passion Fruit</td>
+                    <td><input type="number" name="Passion-FruitBoxes" min="0" oninput="calculateTotal('Passion-Fruit')"></td>
+                    <td><input type="text" name="Passion-FruitBoxPrice" step="0.01" oninput="calculateTotal('Passion-Fruit')" value="1" disabled="disabled" id="inputboxPassion-Fruit" size="4" min="0"><input type="checkbox" id="boxPassion-Fruit" Checked="checked" ></td>
+                    <td><input type="number" name="Passion-FruitKg" min="0" step="0.01" oninput="calculateTotal('Passion-Fruit')"></td>
+                    <td><input type="text" name="Passion-FruitKgPrice" step="0.01" oninput="calculateTotal('Passion-Fruit')" value="3" disabled="disabled" id="inputkgPassion-Fruit" size="4"><input type="checkbox" id="kgPassion-Fruit" Checked="checked"></td>
+                    <td><input type="hidden" name="Passion-FruitTotalBoxPrice" readonly disabled="disabled" size="1"></td>
+                    <td><input type="hidden" name="Passion-FruitTotalKgPrice" readonly disabled="disabled" size="1"></td>
+                    <td><input type="text" name="Passion-FruitGrandTotal" readonly size="6"></td>
+				</tr>
+				
+				<tr>
+					<td><img src="icons/broccoli.png" width="15" height="15" alt="apple image">&nbsp; Broccoli</td>
+                    <td><input type="number" name="BroccoliBoxes" min="0" oninput="calculateTotal('Broccoli')"></td>
+                    <td><input type="text" name="BroccoliBoxPrice" step="0.01" oninput="calculateTotal('Broccoli')" value="1" disabled="disabled" id="inputboxBroccoli" size="4" min="0"><input type="checkbox" id="boxBroccoli" Checked="checked" ></td>
+                    <td><input type="number" name="BroccoliKg" min="0" step="0.01" oninput="calculateTotal('Broccoli')"></td>
+                    <td><input type="text" name="BroccoliKgPrice" step="0.01" oninput="calculateTotal('Broccoli')" value="8" disabled="disabled" id="inputkgBroccoli" size="4"><input type="checkbox" id="kgBroccoli" Checked="checked"></td>
+                    <td><input type="hidden" name="BroccoliTotalBoxPrice" readonly disabled="disabled" size="1"></td>
+                    <td><input type="hidden" name="BroccoliTotalKgPrice" readonly disabled="disabled" size="1"></td>
+                    <td><input type="text" name="BroccoliGrandTotal" readonly size="6"></td>
+				</tr>
+				
+				<tr>
+					<td><img src="icons/banana.png" width="15" height="15" alt="apple image">&nbsp; Banana</td>
+                    <td><input type="number" name="BananaBoxes" min="0" oninput="calculateTotal('Banana')"></td>
+                    <td><input type="text" name="BananaBoxPrice" step="0.01" oninput="calculateTotal('Banana')" value="1" disabled="disabled" id="inputboxBanana" size="4" min="0"><input type="checkbox" id="boxBanana" Checked="checked" ></td>
+                    <td><input type="number" name="BananaKg" min="0" step="0.01" oninput="calculateTotal('Banana')"></td>
+                    <td><input type="text" name="BananaKgPrice" step="0.01" oninput="calculateTotal('Banana')" value="8" disabled="disabled" id="inputkgBanana" size="4"><input type="checkbox" id="kgBanana" Checked="checked"></td>
+                    <td><input type="hidden" name="BananaTotalBoxPrice" readonly disabled="disabled" size="1"></td>
+                    <td><input type="hidden" name="BananaTotalKgPrice" readonly disabled="disabled" size="1"></td>
+                    <td><input type="text" name="BananaGrandTotal" readonly size="6"></td>
+				</tr>
+				
+				<tr>
+					<td><img src="icons/avocado.png" width="15" height="15" alt="apple image">&nbsp; Avocado</td>
+                    <td><input type="number" name="AvocadoBoxes" min="0" oninput="calculateTotal('Avocado')"></td>
+                    <td><input type="text" name="AvocadoBoxPrice" step="0.01" oninput="calculateTotal('Avocado')" value="1" disabled="disabled" id="inputboxAvocado" size="4" min="0"><input type="checkbox" id="boxAvocado" Checked="checked" ></td>
+                    <td><input type="number" name="AvocadoKg" min="0" step="0.01" oninput="calculateTotal('Avocado')"></td>
+                    <td><input type="text" name="AvocadoKgPrice" step="0.01" oninput="calculateTotal('Avocado')" value="4" disabled="disabled" id="inputkgAvocado" size="4"><input type="checkbox" id="kgAvocado" Checked="checked"></td>
+                    <td><input type="hidden" name="AvocadoTotalBoxPrice" readonly disabled="disabled" size="1"></td>
+                    <td><input type="hidden" name="AvocadoTotalKgPrice" readonly disabled="disabled" size="1"></td>
+                    <td><input type="text" name="AvocadoGrandTotal" readonly size="6"></td>
+				</tr>
+				
+				<tr>
+					<td><img src="icons/redgrapefruit.png" width="15" height="15" alt="apple image">&nbsp; Red Grape Fruit</td>
+                    <td><input type="number" name="RedgrapeBoxes" min="0" oninput="calculateTotal('Redgrape')"></td>
+                    <td><input type="text" name="RedgrapeBoxPrice" step="0.01" oninput="calculateTotal('Redgrape')" value="1" disabled="disabled" id="inputboxRedgrape" size="4" min="0"><input type="checkbox" id="boxRedgrape" Checked="checked" ></td>
+                    <td><input type="number" name="RedgrapeKg" min="0" step="0.01" oninput="calculateTotal('Redgrape')"></td>
+                    <td><input type="text" name="RedgrapeKgPrice" step="0.01" oninput="calculateTotal('Redgrape')" value="15" disabled="disabled" id="inputkgRedgrape" size="4"><input type="checkbox" id="kgRedgrape" Checked="checked"></td>
+                    <td><input type="hidden" name="RedgrapeTotalBoxPrice" readonly disabled="disabled" size="1"></td>
+                    <td><input type="hidden" name="RedgrapeTotalKgPrice" readonly disabled="disabled" size="1"></td>
+                    <td><input type="text" name="RedgrapeGrandTotal" readonly size="6"></td>
+				</tr>
+				
+				<tr>
+					<td><img src="icons/kale.png" width="15" height="15" alt="apple image">&nbsp; Kale</td>
+                    <td><input type="number" name="KaleBoxes" min="0" oninput="calculateTotal('Kale')"></td>
+                    <td><input type="text" name="KaleBoxPrice" step="0.01" oninput="calculateTotal('Kale')" value="1" disabled="disabled" id="inputboxKale" size="4" min="0"><input type="checkbox" id="boxKale" Checked="checked" ></td>
+                    <td><input type="number" name="KaleKg" min="0" step="0.01" oninput="calculateTotal('Kale')"></td>
+                    <td><input type="text" name="KaleKgPrice" step="0.01" oninput="calculateTotal('Kale')" value="4" disabled="disabled" id="inputkgKale" size="4"><input type="checkbox" id="kgKale" Checked="checked"></td>
+                    <td><input type="hidden" name="KaleTotalBoxPrice" readonly disabled="disabled" size="1"></td>
+                    <td><input type="hidden" name="KaleTotalKgPrice" readonly disabled="disabled" size="1"></td>
+                    <td><input type="text" name="KaleGrandTotal" readonly size="6"></td>
+				</tr>
+				
+				<tr>
+					<td><img src="icons/kiwi.png" width="15" height="15" alt="apple image">&nbsp; Kiwi</td>
+                    <td><input type="number" name="KiwiBoxes" min="0" oninput="calculateTotal('Kiwi')"></td>
+                    <td><input type="text" name="KiwiBoxPrice" step="0.01" oninput="calculateTotal('Kiwi')" value="1" disabled="disabled" id="inputboxKiwi" size="4" min="0"><input type="checkbox" id="boxKiwi" Checked="checked" ></td>
+                    <td><input type="number" name="KiwiKg" min="0" step="0.01" oninput="calculateTotal('Kiwi')"></td>
+                    <td><input type="text" name="KiwiKgPrice" step="0.01" oninput="calculateTotal('Kiwi')" value="2.7" disabled="disabled" id="inputkgKiwi" size="4"><input type="checkbox" id="kgKiwi" Checked="checked"></td>
+                    <td><input type="hidden" name="KiwiTotalBoxPrice" readonly disabled="disabled" size="1"></td>
+                    <td><input type="hidden" name="KiwiTotalKgPrice" readonly disabled="disabled" size="1"></td>
+                    <td><input type="text" name="KiwiGrandTotal" readonly size="6"></td>
+				</tr>
+				
+				<tr>
+					<td><img src="icons/spinach.png" width="15" height="15" alt="apple image">&nbsp; Spinach</td>
+                    <td><input type="number" name="SpinachBoxes" min="0" oninput="calculateTotal('Spinach')"></td>
+                    <td><input type="text" name="SpinachBoxPrice" step="0.01" oninput="calculateTotal('Spinach')" value="1" disabled="disabled" id="inputboxSpinach" size="4" min="0"><input type="checkbox" id="boxSpinach" Checked="checked" ></td>
+                    <td><input type="number" name="SpinachKg" min="0" step="0.01" oninput="calculateTotal('Spinach')"></td>
+                    <td><input type="text" name="SpinachKgPrice" step="0.01" oninput="calculateTotal('Spinach')" value="0.125" disabled="disabled" id="inputkgSpinach" size="4"><input type="checkbox" id="kgSpinach" Checked="checked"></td>
+                    <td><input type="hidden" name="SpinachTotalBoxPrice" readonly disabled="disabled" size="1"></td>
+                    <td><input type="hidden" name="SpinachTotalKgPrice" readonly disabled="disabled" size="1"></td>
+                    <td><input type="text" name="SpinachGrandTotal" readonly size="6"></td>
+				</tr>
+				
+				<tr>
+					<td><img src="icons/celery.png" width="15" height="15" alt="apple image">&nbsp; Celery</td>
+                    <td><input type="number" name="CeleryBoxes" min="0" oninput="calculateTotal('Celery')"></td>
+                    <td><input type="text" name="CeleryBoxPrice" step="0.01" oninput="calculateTotal('Celery')" value="1" disabled="disabled" id="inputboxCelery" size="4" min="0"><input type="checkbox" id="boxCelery" Checked="checked" ></td>
+                    <td><input type="number" name="CeleryKg" min="0" step="0.01" oninput="calculateTotal('Celery')"></td>
+                    <td><input type="text" name="CeleryKgPrice" step="0.01" oninput="calculateTotal('Celery')" value="8" disabled="disabled" id="inputkgCelery" size="4"><input type="checkbox" id="kgCelery" Checked="checked"></td>
+                    <td><input type="hidden" name="CeleryTotalBoxPrice" readonly disabled="disabled" size="1"></td>
+                    <td><input type="hidden" name="CeleryTotalKgPrice" readonly disabled="disabled" size="1"></td>
+                    <td><input type="text" name="CeleryGrandTotal" readonly size="6"></td>
+				</tr>
+				
+				<tr>
+					<td><img src="icons/mint.png" width="15" height="15" alt="apple image">&nbsp; Mint</td>
+                    <td><input type="number" name="MintBoxes" min="0" oninput="calculateTotal('Mint')"></td>
+                    <td><input type="text" name="MintBoxPrice" step="0.01" oninput="calculateTotal('Mint')" value="1" disabled="disabled" id="inputboxMint" size="4" min="0"><input type="checkbox" id="boxMint" Checked="checked" ></td>
+                    <td><input type="number" name="MintKg" min="0" step="0.01" oninput="calculateTotal('Mint')"></td>
+                    <td><input type="text" name="MintKgPrice" step="0.01" oninput="calculateTotal('Mint')" value="1" disabled="disabled" id="inputkgMint" size="4"><input type="checkbox" id="kgMint" Checked="checked"></td>
+                    <td><input type="hidden" name="MintTotalBoxPrice" readonly disabled="disabled" size="1"></td>
+                    <td><input type="hidden" name="MintTotalKgPrice" readonly disabled="disabled" size="1"></td>
+                    <td><input type="text" name="MintGrandTotal" readonly size="6"></td>
+				</tr>
+				
+				<tr>
+					<td><img src="icons/carrot.png" width="15" height="15" alt="apple image">&nbsp; Carrot</td>
+                    <td><input type="number" name="CarrotBoxes" min="0" oninput="calculateTotal('Carrot')"></td>
+                    <td><input type="text" name="CarrotBoxPrice" step="0.01" oninput="calculateTotal('Carrot')" value="1" disabled="disabled" id="inputboxCarrot" size="4" min="0"><input type="checkbox" id="boxCarrot" Checked="checked" ></td>
+                    <td><input type="number" name="CarrotKg" min="0" step="0.01" oninput="calculateTotal('Carrot')"></td>
+                    <td><input type="text" name="CarrotKgPrice" step="0.01" oninput="calculateTotal('Carrot')" value="10" disabled="disabled" id="inputkgCarrot" size="4"><input type="checkbox" id="kgCarrot" Checked="checked"></td>
+                    <td><input type="hidden" name="CarrotTotalBoxPrice" readonly disabled="disabled" size="1"></td>
+                    <td><input type="hidden" name="CarrotTotalKgPrice" readonly disabled="disabled" size="1"></td>
+                    <td><input type="text" name="CarrotGrandTotal" readonly size="6"></td>
+				</tr>
+				
+				<tr>
+					<td><img src="icons/tomato.png" width="15" height="15" alt="apple image">&nbsp; Tomatoes</td>
+                    <td><input type="number" name="TomatoesBoxes" min="0" oninput="calculateTotal('Tomatoes')"></td>
+                    <td><input type="text" name="TomatoesBoxPrice" step="0.01" oninput="calculateTotal('Tomatoes')" value="1" disabled="disabled" id="inputboxTomatoes" size="4" min="0"><input type="checkbox" id="boxTomatoes" Checked="checked" ></td>
+                    <td><input type="number" name="TomatoesKg" min="0" step="0.01" oninput="calculateTotal('Tomatoes')"></td>
+                    <td><input type="text" name="TomatoesKgPrice" step="0.01" oninput="calculateTotal('Tomatoes')" value="4" disabled="disabled" id="inputkgTomatoes" size="4"><input type="checkbox" id="kgTomatoes" Checked="checked"></td>
+                    <td><input type="hidden" name="TomatoesTotalBoxPrice" readonly disabled="disabled" size="1"></td>
+                    <td><input type="hidden" name="TomatoesTotalKgPrice" readonly disabled="disabled" size="1"></td>
+                    <td><input type="text" name="TomatoesGrandTotal" readonly size="6"></td>
+				</tr>
+				
+				<tr>
+					<td><img src="icons/spring-onion.png" width="15" height="15" alt="apple image">&nbsp; Spring Onion</td>
+                    <td><input type="number" name="SpringonionBoxes" min="0" oninput="calculateTotal('Springonion')"></td>
+                    <td><input type="text" name="SpringonionBoxPrice" step="0.01" oninput="calculateTotal('Springonion')" value="1" disabled="disabled" id="inputboxSpringonion" size="4" min="0"><input type="checkbox" id="boxSpringonion" Checked="checked" ></td>
+                    <td><input type="number" name="SpringonionKg" min="0" step="0.01" oninput="calculateTotal('Springonion')"></td>
+                    <td><input type="text" name="SpringonionKgPrice" step="0.01" oninput="calculateTotal('Springonion')" value="1" disabled="disabled" id="inputkgSpringonion" size="4"><input type="checkbox" id="kgSpringonion" Checked="checked"></td>
+                    <td><input type="hidden" name="SpringonionTotalBoxPrice" readonly disabled="disabled" size="1"></td>
+                    <td><input type="hidden" name="SpringonionTotalKgPrice" readonly disabled="disabled" size="1"></td>
+                    <td><input type="text" name="SpringonionGrandTotal" readonly size="6"></td>
+				</tr>
+				
+				<tr>
+					<td><img src="icons/red-onion.png" width="15" height="15" alt="apple image">&nbsp; Red Onion</td>
+                    <td><input type="number" name="RedonionBoxes" min="0" oninput="calculateTotal('Redonion')"></td>
+                    <td><input type="text" name="RedonionBoxPrice" step="0.01" oninput="calculateTotal('Redonion')" value="1" disabled="disabled" id="inputboxRedonion" size="4" min="0"><input type="checkbox" id="boxRedonion" Checked="checked" ></td>
+                    <td><input type="number" name="RedonionKg" min="0" step="0.01" oninput="calculateTotal('Redonion')"></td>
+                    <td><input type="text" name="RedonionKgPrice" step="0.01" oninput="calculateTotal('Redonion')" value="5" disabled="disabled" id="inputkgRedonion" size="4"><input type="checkbox" id="kgRedonion" Checked="checked"></td>
+                    <td><input type="hidden" name="RedonionTotalBoxPrice" readonly disabled="disabled" size="1"></td>
+                    <td><input type="hidden" name="RedonionTotalKgPrice" readonly disabled="disabled" size="1"></td>
+                    <td><input type="text" name="RedonionGrandTotal" readonly size="6"></td>
+				</tr>
+				
+				<tr>
+					<td><img src="icons/dill.png" width="15" height="15" alt="apple image">&nbsp; Dill</td>
+                    <td><input type="number" name="DillBoxes" min="0" oninput="calculateTotal('Dill')"></td>
+                    <td><input type="text" name="DillBoxPrice" step="0.01" oninput="calculateTotal('Dill')" value="1" disabled="disabled" id="inputboxDill" size="4" min="0"><input type="checkbox" id="boxDill" Checked="checked" ></td>
+                    <td><input type="number" name="DillKg" min="0" step="0.01" oninput="calculateTotal('Dill')"></td>
+                    <td><input type="text" name="DillKgPrice" step="0.01" oninput="calculateTotal('Dill')" value="1" disabled="disabled" id="inputkgDill" size="4"><input type="checkbox" id="kgDill" Checked="checked"></td>
+                    <td><input type="hidden" name="DillTotalBoxPrice" readonly disabled="disabled" size="1"></td>
+                    <td><input type="hidden" name="DillTotalKgPrice" readonly disabled="disabled" size="1"></td>
+                    <td><input type="text" name="DillGrandTotal" readonly size="6"></td>
+				</tr>
+				
+				<tr>
+					<td><img src="icons/bell-pepper.png" width="15" height="15" alt="apple image">&nbsp; Red Bell Pepper</td>
+                    <td><input type="number" name="RedbellBoxes" min="0" oninput="calculateTotal('Redbell')"></td>
+                    <td><input type="text" name="RedbellBoxPrice" step="0.01" oninput="calculateTotal('Redbell')" value="1" disabled="disabled" id="inputboxRedbell" size="4" min="0"><input type="checkbox" id="boxRedbell" Checked="checked" ></td>
+                    <td><input type="number" name="RedbellKg" min="0" step="0.01" oninput="calculateTotal('Redbell')"></td>
+                    <td><input type="text" name="RedbellKgPrice" step="0.01" oninput="calculateTotal('Redbell')" value="4.5" disabled="disabled" id="inputkgRedbell" size="4"><input type="checkbox" id="kgRedbell" Checked="checked"></td>
+                    <td><input type="hidden" name="RedbellTotalBoxPrice" readonly disabled="disabled" size="1"></td>
+                    <td><input type="hidden" name="RedbellTotalKgPrice" readonly disabled="disabled" size="1"></td>
+                    <td><input type="text" name="RedbellGrandTotal" readonly size="6"></td>
+				</tr>
             </tbody>
         </table>
         <br>
-        <input type="submit" value="Submit Orders">
+        <input type="submit" value="Print/Save comming soon">
     </form>
 		
+		<!--FUNCTION FOR search bar --->
+		<script>
+        document.getElementById('searchInput').addEventListener('keyup', function() {
+            const input = this.value.toLowerCase();
+            const rows = document.querySelectorAll('#myTable tbody tr');
+            
+            rows.forEach(row => {
+                const text = row.textContent.toLowerCase();
+                row.style.display = text.includes(input) ? '' : 'none';
+            });
+        });
+		</script>
+		
+		<!--FUNCTION FOR Calculation --->
 		<script>
         function calculateTotal(fruit) {
             const boxes = parseFloat(document.querySelector(`input[name='${fruit}Boxes']`).value) || 0;
@@ -57,7 +305,8 @@
             document.querySelector(`input[name='${fruit}GrandTotal']`).value = grandTotal;
         }
 		</script>
-	
+		
+		<!--FUNCTION FOR check button for updating data orders --->
 		<script>
 			document.getElementById('boxapple').onchange = function() {
     		document.getElementById('inputboxapple').disabled = this.checked;
@@ -66,14 +315,196 @@
     		document.getElementById('inputkgapple').disabled = this.checked;
 		};
 		</script>
+		
 		<script>
-			document.getElementById('boxPineapple').onchange = function() {
-    		document.getElementById('inputboxPineapple').disabled = this.checked;
+			document.getElementById('boxPineapples').onchange = function() {
+    		document.getElementById('inputboxPineapples').disabled = this.checked;
 		};
-			document.getElementById('kgPineapple').onchange = function() {
-    		document.getElementById('inputkgPineapple').disabled = this.checked;
+			document.getElementById('kgPineapples').onchange = function() {
+    		document.getElementById('inputkgPineapples').disabled = this.checked;
 		};
 		</script>
+		
+		<script>
+			document.getElementById('boxLemon').onchange = function() {
+    		document.getElementById('inputboxLemon').disabled = this.checked;
+		};
+			document.getElementById('kgLemon').onchange = function() {
+    		document.getElementById('inputkgLemon').disabled = this.checked;
+		};
+		</script>
+		
+		<script>
+			document.getElementById('boxCucumber').onchange = function() {
+    		document.getElementById('inputboxCucumber').disabled = this.checked;
+		};
+			document.getElementById('kgCucumber').onchange = function() {
+    		document.getElementById('inputkgCucumber').disabled = this.checked;
+		};
+		</script>
+		
+		<script>
+			document.getElementById('boxTurmeric').onchange = function() {
+    		document.getElementById('inputboxTurmeric').disabled = this.checked;
+		};
+			document.getElementById('kgTurmeric').onchange = function() {
+    		document.getElementById('inputkgTurmeric').disabled = this.checked;
+		};
+		</script>
+		
+		<script>
+			document.getElementById('boxGinger').onchange = function() {
+    		document.getElementById('inputboxGinger').disabled = this.checked;
+		};
+			document.getElementById('kgGinger').onchange = function() {
+    		document.getElementById('inputkgGinger').disabled = this.checked;
+		};
+		</script>
+		
+		<script>
+			document.getElementById('boxPassion-Fruit').onchange = function() {
+    		document.getElementById('inputboxPassion-Fruit').disabled = this.checked;
+		};
+			document.getElementById('kgPassion-Fruit').onchange = function() {
+    		document.getElementById('inputkgPassion-Fruit').disabled = this.checked;
+		};
+		</script>
+		
+		<script>
+			document.getElementById('boxBroccoli').onchange = function() {
+    		document.getElementById('inputboxBroccoli').disabled = this.checked;
+		};
+			document.getElementById('kgBroccoli').onchange = function() {
+    		document.getElementById('inputkgBroccoli').disabled = this.checked;
+		};
+		</script>
+		
+		<script>
+			document.getElementById('boxBanana').onchange = function() {
+    		document.getElementById('inputboxBanana').disabled = this.checked;
+		};
+			document.getElementById('kgBanana').onchange = function() {
+    		document.getElementById('inputkgBanana').disabled = this.checked;
+		};
+		</script>
+		
+		<script>
+			document.getElementById('boxAvocado').onchange = function() {
+    		document.getElementById('inputboxAvocado').disabled = this.checked;
+		};
+			document.getElementById('kgAvocado').onchange = function() {
+    		document.getElementById('inputkgAvocado').disabled = this.checked;
+		};
+		</script>
+		
+		<script>
+			document.getElementById('boxRedgrape').onchange = function() {
+    		document.getElementById('inputboxRedgrape').disabled = this.checked;
+		};
+			document.getElementById('kgRedgrape').onchange = function() {
+    		document.getElementById('inputkgRedgrape').disabled = this.checked;
+		};
+		</script>
+		
+		<script>
+			document.getElementById('boxKale').onchange = function() {
+    		document.getElementById('inputboxKale').disabled = this.checked;
+		};
+			document.getElementById('kgKale').onchange = function() {
+    		document.getElementById('inputkgKale').disabled = this.checked;
+		};
+		</script>
+		
+		<script>
+			document.getElementById('boxKiwi').onchange = function() {
+    		document.getElementById('inputboxKiwi').disabled = this.checked;
+		};
+			document.getElementById('kgKiwi').onchange = function() {
+    		document.getElementById('inputkgKiwi').disabled = this.checked;
+		};
+		</script>
+		
+		<script>
+			document.getElementById('boxSpinach').onchange = function() {
+    		document.getElementById('inputboxSpinach').disabled = this.checked;
+		};
+			document.getElementById('kgSpinach').onchange = function() {
+    		document.getElementById('inputkgSpinach').disabled = this.checked;
+		};
+		</script>
+		
+		<script>
+			document.getElementById('boxCelery').onchange = function() {
+    		document.getElementById('inputboxCelery').disabled = this.checked;
+		};
+			document.getElementById('kgCelery').onchange = function() {
+    		document.getElementById('inputkgCelery').disabled = this.checked;
+		};
+		</script>
+		
+		<script>
+			document.getElementById('boxMint').onchange = function() {
+    		document.getElementById('inputboxMint').disabled = this.checked;
+		};
+			document.getElementById('kgMint').onchange = function() {
+    		document.getElementById('inputkgMint').disabled = this.checked;
+		};
+		</script>
+		
+		<script>
+			document.getElementById('boxCarrot').onchange = function() {
+    		document.getElementById('inputboxCarrot').disabled = this.checked;
+		};
+			document.getElementById('kgCarrot').onchange = function() {
+    		document.getElementById('inputkgCarrot').disabled = this.checked;
+		};
+		</script>
+		
+		<script>
+			document.getElementById('boxTomatoes').onchange = function() {
+    		document.getElementById('inputboxTomatoes').disabled = this.checked;
+		};
+			document.getElementById('kgTomatoes').onchange = function() {
+    		document.getElementById('inputkgTomatoes').disabled = this.checked;
+		};
+		</script>
+		
+		<script>
+			document.getElementById('boxSpringonion').onchange = function() {
+    		document.getElementById('inputboxSpringonion').disabled = this.checked;
+		};
+			document.getElementById('kgSpringonion').onchange = function() {
+    		document.getElementById('inputkgSpringonion').disabled = this.checked;
+		};
+		</script>
+		
+		<script>
+			document.getElementById('boxRedonion').onchange = function() {
+    		document.getElementById('inputboxRedonion').disabled = this.checked;
+		};
+			document.getElementById('kgRedonion').onchange = function() {
+    		document.getElementById('inputkgRedonion').disabled = this.checked;
+		};
+		</script>
+		
+		<script>
+			document.getElementById('boxDill').onchange = function() {
+    		document.getElementById('inputboxDill').disabled = this.checked;
+		};
+			document.getElementById('kgDill').onchange = function() {
+    		document.getElementById('inputkgDill').disabled = this.checked;
+		};
+		</script>
+		
+		<script>
+			document.getElementById('boxRedbell').onchange = function() {
+    		document.getElementById('inputboxRedbell').disabled = this.checked;
+		};
+			document.getElementById('kgRedbell').onchange = function() {
+    		document.getElementById('inputkgRedbell').disabled = this.checked;
+		};
+		</script>
+		
 		
 		<!--FUNCTION FOR DATE AND TIME -->
 		<script>
@@ -87,6 +518,7 @@
 
         setInterval(updateDateTime, 1000);
 		</script>
+		
 		<a class="program-by" id="dateTime"></a>
 		<a class="program-by">Program By: Albert M.</a>
 		<a class="version">Version 1.2</a>
